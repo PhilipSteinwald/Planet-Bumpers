@@ -1,2 +1,0 @@
-# Planet-Bumpers
-Improved homework

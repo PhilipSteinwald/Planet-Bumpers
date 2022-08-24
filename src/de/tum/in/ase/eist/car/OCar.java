@@ -5,7 +5,7 @@ import de.tum.in.ase.eist.Point2D;
 
 public class OCar extends Car {
 
-	private static final String CAR_IMAGE_FILE = "OCarN1.png";
+	private static final String CAR_IMAGE_FILE = "OCar.png";
 
 	private static final int MIN_SPEED_CAR = 2;
 	private static final int MAX_SPEED_CAR = 2;

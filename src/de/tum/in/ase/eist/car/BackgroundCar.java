@@ -4,7 +4,7 @@ import de.tum.in.ase.eist.Dimension2D;
 
 public class BackgroundCar extends Car {
 
-	private static final String FAST_CAR_IMAGE_FILE = "backgroundCar3.png";
+	private static final String FAST_CAR_IMAGE_FILE = "backgroundCar.png";
 
 	private static final int MIN_SPEED_FAST_CAR = 0;
 	private static final int MAX_SPEED_FAST_CAR = 0;

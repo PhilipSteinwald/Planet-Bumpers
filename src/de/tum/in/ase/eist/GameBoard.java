@@ -6,7 +6,6 @@ import java.util.List;
 import de.tum.in.ase.eist.audio.AudioPlayerInterface;
 import de.tum.in.ase.eist.car.*;
 import de.tum.in.ase.eist.collision.Collision;
-import de.tum.in.ase.eist.collision.DefaultCollision;
 import de.tum.in.ase.eist.collision.StarCollision;
 import de.tum.in.ase.eist.collision.StarCollision2;
 
@@ -21,7 +20,6 @@ public class GameBoard {
 	private static final int NUMBER_OF_G_CARS = 2;
 	private static final int NUMBER_OF_M_CARS = 2;
 	private static final int NUMBER_OF_BLACKHOLES = 2;
-	private static final int TOTAL_CARS = NUMBER_OF_O_CARS+NUMBER_OF_A_CARS+NUMBER_OF_G_CARS+NUMBER_OF_M_CARS;
 
 	private boolean paused;
 	private int ticks;
@@ -244,8 +242,6 @@ public class GameBoard {
 				// because there is no need to check for a collision
 				continue;
 			}
-
-			Collision collision = new DefaultCollision(player.getCar(), car);
 			Collision collision2 = new StarCollision(player.getCar(), car);
 			Collision collision3 = new StarCollision2(player.getCar(), car);
 			if(collision2.isCrash() && player.getCar().getType() != car.getType()){
@@ -295,25 +291,6 @@ public class GameBoard {
 					this.explosion.setPosition(tempX,tempY);
 				}
 			}
-			/*
-			else if (collision.isCrash()) {
-				Car winner = collision.evaluate();
-				Car loser = collision.evaluateLoser();
-				printWinner(winner);
-				loserCars.add(loser);
-
-				this.audioPlayer.playCrashSound();
-
-				loser.crunch();
-
-				if(player.getCar() == loser){
-					gameOutcome = GameOutcome.LOST;
-				}
-				if(isWinner()){
-					gameOutcome = GameOutcome.WON;
-				}
-			}
-			*/
 		}
 	}
 

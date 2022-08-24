@@ -5,7 +5,7 @@ import de.tum.in.ase.eist.Point2D;
 
 public class GCar extends Car {
 
-	private static final String FAST_CAR_IMAGE_FILE = "GCarN1.png";
+	private static final String FAST_CAR_IMAGE_FILE = "GCar.png";
 
 	private static final int MIN_SPEED_FAST_CAR = 4;
 	private static final int MAX_SPEED_FAST_CAR = 4;
